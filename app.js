@@ -34,79 +34,95 @@
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
 // var hariu = 3 > 2 > 1 ==> false гэсэн хариутай
 
-/*2022.10.25*/
+/*2022.10.26*/
 // Өнөөдрийн сэдэв: if statement, ternary operator, switch case, alert, prompt, operater-уудтай ажиллах
 
 // var x = 5;
 // var y = 6;
 
-// x = x + y; // += 11
-// x += y; // 17
-// x -= y; // 11
-
+// // console.log(x + y);
+// // console.log(x);
+// x = x + y;
+// x -= y;
+// x *= y; // x = x*y
 // x++; // x = x + 1;
 // x--; // x = x - 1;
+// console.log(x);
 
 // {} - (block)
-// <, >, =, !-not, &&, ||
-// toString()
-// parseInt() && +
+// <, >, =<, =>, =, ! - not, && - and, || - or
 
-var nas = +prompt("Насаа оруул");
+// var too = +prompt("Toog oruulna uu?");
+// alert(typeof too);
+
+// var too = 45; too.toString()
+// parseInt(), +
+
 // if statement ===>
-if (nas >= 18) {
-  // true
-  alert("Adult");
-} else {
-  // false
-  alert("Child");
-}
-
-if (nas >= 0 && nas <= 12) {
-  console.log("baga nas");
-} else if (nas >= 13 && nas < 18) {
-  console.log("osvor nas");
-} else {
-  console.log("adult");
-}
+// var nas = +prompt("Насаа оруул");
+// if (nas < 18) {
+//   console.log("huuhed");
+// } else {
+//   console.log("huuhed");
+// }
+// ||
+// if (nas >= 0 && nas <= 12) {
+//   console.log("baga nas");
+// } else if (nas >= 13 && nas < 18) {
+//   console.log("osvor nas");
+// } else {
+//   console.log("adult");
+// }
 
 // ternary operator ===>
-var num = 5;
-num < 0
-  ? console.log("sorog")
-  : num % 1 == 0
-  ? console.log("buhel")
-  : console.log("butarhai");
+// promptoos тоон утга аваад num хувьсагчинд хадгалж өгөөд тухайн тоог сөрөг, бүхэл, бутархай эсэхийг шалгах программ бич.
+// var num;
+// num = +prompt("Too oruulna uu?");
+// num < 0
+//   ? console.log("sorog too baina.")
+//   : num % 1 == 0
+//   ? console.log("buhel too.")
+//   : console.log("butarhai too bn.");
 
-nas >= 0 && nas <= 12
-  ? console.log("baga nas")
-  : nas >= 13 && nas <= 17
-  ? console.log("osvor nas")
-  : console.log("adult");
+// nas >= 0 && nas <= 12
+//   ? console.log("baga nas")
+//   : nas >= 13 && nas <= 17
+//   ? console.log("osvor nas")
+//   : console.log("adult");
 
 // switch case ===>
-var fruits = "Banana";
-switch (fruits) {
-  case "Banana":
-    alert("Banana");
-    break;
-  case "Apple":
-    alert("Apple");
-    break;
-}
+// var fruits;
+// fruits = "grapes";
+// switch (fruits) {
+//   case "orange":
+//     console.log("jurj bna.");
+//     break;
+//   case "banana":
+//     console.log("gadil bna");
+//     break;
+//   case "grapes":
+//     console.log("usan uzem bna.");
+//     break;
+//   default:
+//     console.log("Iim jims medehgui ee.");
+// }
 
-switch (true) {
-  case nas >= 0 && nas < 13:
-    console.log("child");
-    break;
-  case nas >= 12 && nas < 18:
-    console.log("osvor nas");
-    break;
-  default:
-    console.log("adult");
-}
+// switch (true) {
+//   case nas >= 0 && nas < 13:
+//     console.log("child");
+//     break;
+//   case nas >= 12 && nas < 18:
+//     console.log("osvor nas");
+//     break;
+//   default:
+//     console.log("adult");
+// }
 
-/* Дасгал:
-Гараас радиус авж тухайн радиустай тойргийн урт, талбайг тус тусад нь ол..
+/* Дасгал №1:
+Гараас радиус авж тухайн радиустай тойргийн урт, талбайг тус тусад нь олдог програм бичээрэй.
 urt = PI * 2 * r;
 talbai = PI * r * r; */
+
+/* Дасгал №2
+Гараас насаа оруулах үед Imgs folder доторх насны үечлэл зургийн дагуу өнөөдрийн хичээлээр үзсэн if statement, ternary operator, switch case -ийг нь тус тусад нь ашиглаж тухайн настай хүнийг аль үечлэлд хамрагдаж байгааг олох програм бичиж ирээрэй. 
+*/
