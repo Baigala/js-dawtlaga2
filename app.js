@@ -37,25 +37,12 @@
 /*2022.10.26*/
 // Өнөөдрийн сэдэв: if statement, ternary operator, switch case, alert, prompt, operater-уудтай ажиллах
 
-// var x = 5;
-// var y = 6;
-
-// // console.log(x + y);
-// // console.log(x);
-// x = x + y;
-// x -= y;
-// x *= y; // x = x*y
-// x++; // x = x + 1;
-// x--; // x = x - 1;
-// console.log(x);
-
 // {} - (block)
 // <, >, =<, =>, =, ! - not, && - and, || - or
 
 // var too = +prompt("Toog oruulna uu?");
 // alert(typeof too);
 
-// var too = 45; too.toString()
 // parseInt(), +
 
 // if statement ===>
@@ -65,7 +52,7 @@
 // } else {
 //   console.log("huuhed");
 // }
-// ||
+//
 // if (nas >= 0 && nas <= 12) {
 //   console.log("baga nas");
 // } else if (nas >= 13 && nas < 18) {
@@ -124,5 +111,35 @@ urt = PI * 2 * r;
 talbai = PI * r * r; */
 
 /* Дасгал №2
-Гараас насаа оруулах үед Imgs folder доторх насны үечлэл зургийн дагуу өнөөдрийн хичээлээр үзсэн if statement, ternary operator, switch case -ийг нь тус тусад нь ашиглаж тухайн настай хүнийг аль үечлэлд хамрагдаж байгааг олох програм бичиж ирээрэй. 
+Гараас насаа оруулах үед Imgs folder доторх насны үечлэл зургийн дагуу өнөөдрийн хичээлээр үзсэн if statement, ternary operator, switch case -ийг нь тус тусад нь ашиглаж тухайн настай хүнийг аль үечлэлд хамрагдаж байгааг олох програм бичиж ирээрэй.
+*/
+
+/*2022.10.28*/
+// Өнөөдрийн сэдэв: loops буюу давталт
+// i++ i-- ===> i = i - 1 i = i + 1
+// // 0 ees 10 hurtel toonuudiig console-d hewleh.
+// for (var i = 0; i <= 10; i++) {
+//   console.log(i);
+// }
+// 1-ees 100 hurtel toonuudaas zowhon tegsh toonuudiig hewlii.
+// for (var i = 1; i <= 1000; i++) {
+//   if (i % 7 == 0) {
+//     console.log(i);
+//   }
+// }
+
+/* Дасгал №3
+10 хүртэл давталт хийж, тоо тус бүрийг өмнөх тооны нийлбэртэй консолд хэвлэнэ үү. */
+/* Дасгал №4
+*
+**
+***
+****
+*****
+
+*****
+****
+***
+**
+*
 */
