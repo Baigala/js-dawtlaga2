@@ -130,6 +130,11 @@ talbai = PI * r * r; */
 
 /* Дасгал №3
 10 хүртэл давталт хийж, тоо тус бүрийг өмнөх тооны нийлбэртэй консолд хэвлэнэ үү. */
+// var sum = 0;
+// for (var i = 0; i <= 10; i++) {
+//   sum += i;
+//   console.log(`${i} hurtelh toonii niilber: ${sum}`);
+// }
 /* Дасгал №4
 *
 **
@@ -137,9 +142,78 @@ talbai = PI * r * r; */
 ****
 *****
 
+
 *****
 ****
 ***
 **
 *
+
 */
+// var num = 5;
+// var string = "";
+// for (var i = 1; i <= num; i++) {
+//   for (var j = 0; j < i; j++) {
+//     string += "*";
+//   }
+//   string += "\n";
+// }
+// console.log(string);
+
+/*2022.10.31*/
+// Өнөөдрийн сэдэв: function
+// void function буюу зөвхөн үйлдэл хийдэг function
+// function nemeh1(too1, too2) {
+//   var hariu = too1 + too2;
+//   console.log(hariu);
+// }
+// nemeh1(4, 6);
+// return хийдэг буюу утга буцаадаг функц.
+// function nemeh2(too1, too2) {
+//   var hariu = too1 + too2;
+//   return hariu;
+// }
+// console.log(2 * nemeh2(12, 3));
+// backtick - `${} aa aa    aaa`
+// overring
+// var ner = "Baigal";
+// var mergejil = "bagsh";
+// if (mergejil == "marketing manager") {
+//   console.log(ner + " poster hdg");
+// } else if (mergejil == "bagsh") {
+//   console.log(`${ner} hicheel zaadag.`);
+// } else {
+//   console.log("iim mergejil medehgui.");
+// }
+
+// var name = "Zoloo";
+// var job = "marketing manager";
+// if (job == "marketing manager") {
+//   console.log(name + " poster hdg");
+// } else if (job == "bagsh") {
+//   console.log(`${name} hicheel zaadag.`);
+// } else {
+//   console.log("iim job medehgui.");
+// }
+
+function mergejilShalgah(ner, mergejil) {
+  if (mergejil == "marketing manager") {
+    console.log(ner + " poster hdg");
+  } else if (mergejil == "bagsh") {
+    console.log(`${ner} hicheel zaadag.`);
+  } else {
+    console.log("iim mergejil medehgui.");
+  }
+}
+mergejilShalgah("Baigal", "bagsh");
+mergejilShalgah("Zoloo", "marketing manager");
+mergejilShalgah("Болд", "marketing manager");
+
+/* Дасгал №5
+Гараас 2ш тоо өгөгдсөн ба, хэрэв тэдгээрийн үржвэр 1000-с их бол үрвэрийг буцааж, 1000-с бага бол нийлбэрийг буцаа */
+
+/* Дасгал №6
+ Гараас тоо өгөгдсөн бол тухайн тоо хүртэлх нийлбэрүүүдийг олж буцаа. */
+
+/* Дасгал №7
+Гараас стринг өгөгдсөн бол тэгш индекс дээрх тэмдэгтүүдийг хэвлэх функц бич. */
