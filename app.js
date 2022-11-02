@@ -6,7 +6,7 @@
 // 5. Массив
 // 6. Object
 // 7. es6 нэмэлт
-// 8. DOM
+// 8. bodloguud
 // 9. DOM
 // 10. DOM
 // 11. Module
@@ -110,7 +110,7 @@
 urt = PI * 2 * r;
 talbai = PI * r * r; */
 
-/* Дасгал №2
+/* Дасгал №2:
 Гараас насаа оруулах үед Imgs folder доторх насны үечлэл зургийн дагуу өнөөдрийн хичээлээр үзсэн if statement, ternary operator, switch case -ийг нь тус тусад нь ашиглаж тухайн настай хүнийг аль үечлэлд хамрагдаж байгааг олох програм бичиж ирээрэй.
 */
 
@@ -128,26 +128,20 @@ talbai = PI * r * r; */
 //   }
 // }
 
-/* Дасгал №3
+/* Дасгал №3:
 10 хүртэл давталт хийж, тоо тус бүрийг өмнөх тооны нийлбэртэй консолд хэвлэнэ үү. */
 // var sum = 0;
 // for (var i = 0; i <= 10; i++) {
 //   sum += i;
 //   console.log(`${i} hurtelh toonii niilber: ${sum}`);
 // }
-/* Дасгал №4
+
+/* Дасгал №4:
 *
 **
 ***
 ****
 *****
-
-
-*****
-****
-***
-**
-*
 
 */
 // var num = 5;
@@ -168,12 +162,14 @@ talbai = PI * r * r; */
 //   console.log(hariu);
 // }
 // nemeh1(4, 6);
+
 // return хийдэг буюу утга буцаадаг функц.
 // function nemeh2(too1, too2) {
 //   var hariu = too1 + too2;
 //   return hariu;
 // }
 // console.log(2 * nemeh2(12, 3));
+
 // backtick - `${} aa aa    aaa`
 // overring
 // var ner = "Baigal";
@@ -196,35 +192,94 @@ talbai = PI * r * r; */
 //   console.log("iim job medehgui.");
 // }
 
-function mergejilShalgah(ner, mergejil) {
-  if (mergejil == "marketing manager") {
-    console.log(ner + " poster hdg");
-  } else if (mergejil == "bagsh") {
-    console.log(`${ner} hicheel zaadag.`);
-  } else {
-    console.log("iim mergejil medehgui.");
-  }
-}
-mergejilShalgah("Baigal", "bagsh");
-mergejilShalgah("Zoloo", "marketing manager");
-mergejilShalgah("Болд", "marketing manager");
+// function mergejilShalgah(ner, mergejil) {
+//   if (mergejil == "marketing manager") {
+//     console.log(ner + " poster hdg");
+//   } else if (mergejil == "bagsh") {
+//     console.log(`${ner} hicheel zaadag.`);
+//   } else {
+//     console.log("iim mergejil medehgui.");
+//   }
+// }
+// mergejilShalgah("Baigal", "bagsh");
+// mergejilShalgah("Zoloo", "marketing manager");
+// mergejilShalgah("Болд", "marketing manager");
 
-/* Дасгал №5
+/* Дасгал №5:
 Гараас 2ш тоо өгөгдсөн ба, хэрэв тэдгээрийн үржвэр 1000-с их бол үрвэрийг буцааж, 1000-с бага бол нийлбэрийг буцаа */
+// function ex5(num1, num2) {
+//   var urjwer = num1 * num2;
+//   if (urjwer > 1000) {
+//     return urjwer;
+//   }
+//   return num1 + num2;
+// }
+// console.log(ex1(2, 501));
 
-/* Дасгал №6
+/* Дасгал №6:
  Гараас тоо өгөгдсөн бол тухайн тоо хүртэлх нийлбэрүүүдийг олж буцаа. */
+// function ex6(too) {
+//   var sum = 0;
+//   for (var i = 0; i <= too; i++) {
+//     sum += i;
+//   }
+//   return sum;
+// }
+// console.log(ex6(3));
 
-/* Дасгал №7
-Гараас стринг өгөгдсөн бол тэгш индекс дээрх тэмдэгтүүдийг хэвлэх функц бич. */
-function ex7(text) {
-  for (var i = 0; i < text.length; i++) {
-    if (i % 2 == 0) {
-      console.log(text[i]);
+/* Дасгал №7:
+Гурвалжны суурь болон өндөр өгөгдсөн бол тухайн гурвалжны талбайг олж буцаа. 
+томьёо: (суурь * өндөр) / 2 */
+
+/*2022.11.02*/
+// Өнөөдрийн сэдэв: массив.
+// push() - хамгийн сүүлд элемент нэмж өгнө.
+// pop() - хамгийн сүүлийн элементийг устгах.
+// shift() - хамгийн эхний элементийг устгах.
+// unshift() - хамгийн эхэнд элемент нэмэх.
+// slice() - тодорхой хэсгийг тасдаж авна.
+// splice() - тодорхой хэсгийг устгах.
+// reverse() - өгөгдлүүдийн байрлалыг урвуу болгоно.
+// split("хаагуур салгах") - стринг өгөгдлийг салгаж массив болгоно;
+// join("юу залгаж нийлүүлэх") - массивын элементүүдийг хооронд нь стринг болгон нийлүүлнэ.
+// arr.concat(залгах массив); - 2 массивыг хооронд нь залгаад шинэ массив үүсгэнэ.
+// ... - spread operator massive, object, fucntion дээр ашиглана.
+var mass = [123, 34, 56];
+var arr2 = [1, ...mass];
+
+/*Дасгал №8:
+ Өгөгдсөн массив дотроос 5-д хуваагддаг тоонуудын нийлбэрийг олж буцаа */
+function ex6(arr) {
+  var sum = 0;
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] % 5 === 0) {
+      sum += arr[i];
     }
   }
+  return sum;
 }
-ex7("asdfxc");
+console.log(ex6([5, 0, 1, 10]));
 
-// Өгөгдсөн массив дотор сондгой element болгон сондгой index агуулж, тэгш index болгон тэгш утга агуулж байвал тухайн massiv нь онцгой массив болно. Хэрэв онцгой массив таарвал true эсрэг тохиолдолд тэгш утга буцаа.
-// [2, 1, 2, 1, 2]; ==> ontsgoi massiv
+/*Дасгал №9:
+ Өгөгдсөн массивын эхний болон сүүлийнй элемент тэнцүү бол true, үгүй бол false буцаа */
+
+/* Дасгал №10:
+Гараас стринг өгөгдсөн бол тэгш индекс дээрх тэмдэгтүүдийг хэвлэх функц бич. */
+// function ex3(text) {
+//     for (var i = 0; i < text.length; i++) {
+//       if (i % 2 === 0) {
+//         console.log(text[i]);
+//       }
+//     }
+//   }
+//   console.log(ex3("absd"));
+
+/* Дасгал №11: 
+Өгөгдсөн массив дотор сондгой element болгон сондгой index агуулж, тэгш index болгон тэгш утга агуулж байвал тухайн massiv нь онцгой массив болно. Хэрэв онцгой массив таарвал true эсрэг тохиолдолд тэгш утга буцаа.
+[2, 1, 2, 1, 2]; ==> онцгой массив */
+
+/* Дасгал №12: 
+string төрлийн тоо өгөгджээ. Бүх тэгш цифрүүдийн нийлбэрийг сондгой цифрүүдийн нийлбэртэй харьцуулж тэгш цифрүүдийн нийлбэр их бол тэгш цифрүүдийн нийлбэр их байна харин сондгой цифрүүдийн нийлбэр нь их байвал сондгой цифрүүдийн нийлбэр нь их хэрвээ тэнцүү байвал цифрүүдийн нийлбэр тэнцүү байна гэсэн утга буцаа. 
+string төрлийн тоо ==> "1258" */
+
+/* Дасгал №13: Массиваас element устгадаг функц бич. */
