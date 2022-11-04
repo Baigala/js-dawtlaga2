@@ -63,7 +63,7 @@
 //   console.log("adult");
 // }
 
-// ternary operator ===>
+// ternary operator ==>
 // promptoos тоон утга аваад num хувьсагчинд хадгалж өгөөд тухайн тоог сөрөг, бүхэл, бутархай эсэхийг шалгах программ бич.
 // var num;
 // num = +prompt("Too oruulna uu?");
@@ -316,5 +316,108 @@ talbai = PI * r * r; */
 /* Дасгал №12: 
 string төрлийн тоо өгөгджээ. Бүх тэгш цифрүүдийн нийлбэрийг сондгой цифрүүдийн нийлбэртэй харьцуулж тэгш цифрүүдийн нийлбэр их бол тэгш цифрүүдийн нийлбэр их байна харин сондгой цифрүүдийн нийлбэр нь их байвал сондгой цифрүүдийн нийлбэр нь их хэрвээ тэнцүү байвал цифрүүдийн нийлбэр тэнцүү байна гэсэн утга буцаа. 
 string төрлийн тоо ==> "1258" */
+// "1234"
+// function ex12(str) {
+//   var tegshToonuud = 0;
+//   var sondgoiToonuud = 0;
+//   var hariu;
+//   for (var i = 0; i < str.length; i++) {
+//     if (str[i] % 2 == 0) {
+//       tegshToonuud += +str[i];
+//     }
+//     if (str[i] % 2 == 1) {
+//       sondgoiToonuud += +str[i];
+//     }
+//   }
+//   if (tegshToonuud > sondgoiToonuud) {
+//     hariu = "tegsh ni ih bn.";
+//   } else if (sondgoiToonuud > tegshToonuud) {
+//     hariu = "sondgoi ni ih bn.";
+//   } else {
+//     hariu = "tentsuu bna.";
+//   }
+//   return hariu;
+// }
+// console.log(ex12("1234"));
 
 /* Дасгал №13: Массиваас element устгадаг функц бич. */
+// function deleteElement(arr, ele) {
+//   for (var i = 0; i < arr.length; i++) {
+//     if (arr[i] == ele) {
+//       arr.splice(i, 1);
+//       break;
+//     }
+//   }
+//   return arr;
+// }
+// var arr = [23, 56, 4, 78];
+// var newArr = deleteElement(arr, 56);
+// console.log(newArr); //[23, 4, 78]
+
+/*2022.11.04*/
+// Өнөөдрийн сэдэв: обьект.
+// primitive datatype, non-primitive datatype - massiv, object
+// Дотроо олон төрлийн өгөгдөл ба функц агуулдаг.
+// {key: value} төрлийн өгөгдлүүд хадгална.
+// object dotorh functionii this objectiig ooriin zaadag.
+// objectiin bish functionii this window objectiig zaadag.
+// var hun1 = {
+//   ner: "Baigal",
+//   utas: 8888888,
+//   geriinHayag: {
+//     hot: "UB",
+//     duureg: "BGD",
+//   },
+//   mendleh: function () {
+//     console.log(this.ner + " bainaa.");
+
+//     function aaa() {
+//       console.log(this);
+//     }
+//     aaa();
+//   },
+// };
+
+// function aaaaa() {
+//   console.log(this);
+// }
+// aaaaa();
+// hun1.mendleh();
+// console.log(hun1.utas);
+// console.log(hun1.geriinHayag.hot);
+// this tulhuur ug:
+// console.log(this);
+// hello();
+
+// function hello() {
+//   console.log("Hello function ajillalaa");
+//   console.log("this ==>" + this);
+//   console.log("window ==>" + window);
+//   console.log("globalThis ==>" + globalThis);
+// }
+
+// for in ni massive object 2 uulan deer ni ajillana.
+// var masss = [12, 13, 14];
+// for (var el in masss) {
+//   console.log(masss[el]);
+// }
+
+/* Дасгал №14:
+Books object доторх номнуудаар for in давталт ашиглан давталт хийгээд read property ni false номнуудыг console-д хэвлэ. */
+var books = {
+  book1: {
+    author: "Preeti Shenoy",
+    bookName: "A Place Called Home",
+    read: false,
+  },
+  book2: {
+    author: "Geetanjali Shree’s",
+    bookName: "Tomb of Sand",
+    read: true,
+  },
+  book3: {
+    author: "Harish Mehta",
+    bookName: "The Maverick Effect",
+    read: false,
+  },
+};
