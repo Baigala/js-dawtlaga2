@@ -361,25 +361,32 @@ string төрлийн тоо ==> "1258" */
 // {key: value} төрлийн өгөгдлүүд хадгална.
 // object dotorh functionii this objectiig ooriin zaadag.
 // objectiin bish functionii this window objectiig zaadag.
-// var hun1 = {
-//   ner: "Baigal",
-//   utas: 8888888,
-//   geriinHayag: {
-//     hot: "UB",
-//     duureg: "BGD",
-//   },
-//   mendleh: function () {
-//     console.log(this.ner + " bainaa.");
 
-//     function aaa() {
-//       console.log(this);
-//     }
-//     aaa();
+// var shiree = {
+//   une: 50000,
+//   ongo: "tsagaan",
+//   hemjee: {
+//     urt: "1m",
+//     orgon: "50cm",
 //   },
-// sainuu: function(){
-
-// }
 // };
+// console.log(shiree.hemjee.orgon);
+
+var hun1 = {
+  ner: "Baigal",
+  utas: 8888888,
+  geriinHayag: {
+    hot: "UB",
+    duureg: "BGD",
+  },
+  mendleh: function () {
+    console.log("hi " + this.ner);
+    function aa() {
+      console.log(this);
+    }
+    aa();
+  },
+};
 
 // function aaaaa() {
 //   console.log(this);
@@ -400,6 +407,7 @@ string төрлийн тоо ==> "1258" */
 // }
 
 // for in ni massive object 2 uulan deer ni ajillana.
+// for in
 // var masss = [12, 13, 14];
 // for (var el in masss) {
 //   console.log(masss[el]);
@@ -432,3 +440,52 @@ Books object доторх номнуудаар for in давталт ашигл�
 
 // Дасгал №15:
 // ner, dugaar, email 3-н property-tai hun1, hun2, hun3 geh met objectuud uusgeed massiv dotor hiine. promptoos email awj objectuudaa hadgalsan massiv dotorh objectuudaar dawtalt hiigeed oruulsan emailtai ali neg objectiin email taarj bhin bol tuhain emailtai objectiig consoled hewle.
+var student1 = {
+  ner: "a",
+  number: "99221111",
+  email: "a@gmail.com",
+};
+var student2 = {
+  ner: "b",
+  number: "90444444",
+  email: "b@gmail.com",
+};
+var student3 = {
+  ner: "c",
+  number: "95555555",
+  email: "c@gmail.com",
+};
+var student4 = {
+  ner: "d",
+  number: "96666666",
+  email: "d@gmail.com",
+};
+var student5 = {
+  ner: "e",
+  number: "99999999",
+  email: "e@gmail.com",
+};
+var mobiUsers = [];
+var students = [student1, student2, student3, student4, student5];
+var bool = false;
+var email = prompt("haih emailee oruulna u");
+for (var i = 0; i < students.length; i++) {
+  if (email == students[i].email) {
+    console.log(students[i]);
+    bool = true;
+  }
+
+  if (
+    students[i].number.slice(0, 2) == 99 ||
+    students[i].number.slice(0, 2) == 95
+  ) {
+    mobiUsers.push(students[i]);
+  }
+}
+if (bool == false) {
+  alert("oldsongui e.");
+}
+console.log(mobiUsers);
+/*Дасгал 16
+Massiv дотор хамгийн сүүлийн element-ээс бусад бүх утгуудыг нэгтгэж, хамгийн сүүлийн element-тэй таарж байгаа эсэхийг тооцож boolean утга буцаа. */
+// var arr = ["a", "b", "c", "abc"];
