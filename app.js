@@ -376,6 +376,9 @@ string төрлийн тоо ==> "1258" */
 //     }
 //     aaa();
 //   },
+// sainuu: function(){
+
+// }
 // };
 
 // function aaaaa() {
@@ -404,20 +407,28 @@ string төрлийн тоо ==> "1258" */
 
 /* Дасгал №14:
 Books object доторх номнуудаар for in давталт ашиглан давталт хийгээд read property ni false номнуудыг console-д хэвлэ. */
-var books = {
-  book1: {
-    author: "Preeti Shenoy",
-    bookName: "A Place Called Home",
-    read: false,
-  },
-  book2: {
-    author: "Geetanjali Shree’s",
-    bookName: "Tomb of Sand",
-    read: true,
-  },
-  book3: {
-    author: "Harish Mehta",
-    bookName: "The Maverick Effect",
-    read: false,
-  },
-};
+// var books = {
+//   book1: {
+//     author: "Preeti Shenoy",
+//     bookName: "A Place Called Home",
+//     read: false,
+//   },
+//   book2: {
+//     author: "Geetanjali Shree’s",
+//     bookName: "Tomb of Sand",
+//     read: true,
+//   },
+//   book3: {
+//     author: "Harish Mehta",
+//     bookName: "The Maverick Effect",
+//     read: false,
+//   },
+// };
+// for (const key in books) {
+//   if (books[key].read == false) {
+//     console.log(books[key]);
+//   }
+// }
+
+// Дасгал №15:
+// ner, dugaar, email 3-н property-tai hun1, hun2, hun3 geh met objectuud uusgeed massiv dotor hiine. promptoos email awj objectuudaa hadgalsan massiv dotorh objectuudaar dawtalt hiigeed oruulsan emailtai ali neg objectiin email taarj bhin bol tuhain emailtai objectiig consoled hewle.
