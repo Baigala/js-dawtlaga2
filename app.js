@@ -5,14 +5,14 @@
 // 4. Фунц(function)
 // 5. Массив
 // 6. Object
-// 7. es6 нэмэлт
-// 8. bodloguud
-// 9. bodloguud
-// 10. DOM
-// 11. DOM
-// 12. Module
+// 7. bodloguud
+// 8. es6 нэмэлт
+// 9. DOM
+// 10. regex
+// 11. localstorage
+// 12. OOP
 // 13. OOP
-// 14. OOP
+// 14. Module
 
 /*2022.10.23*/
 // Өнөөдрийн сэдэв: git, var, datatype, coersion
@@ -220,7 +220,7 @@ talbai = PI * r * r; */
 
 /* Дасгал №6:
  Гараас тоо өгөгдсөн бол тухайн тоо хүртэлх нийлбэрүүүдийг олж буцаа. */
-// function ex6(too) {
+// function ex6(too){
 //   var sum = 0;
 //   for (var i = 0; i <= too; i++) {
 //     sum += i;
@@ -372,21 +372,21 @@ string төрлийн тоо ==> "1258" */
 // };
 // console.log(shiree.hemjee.orgon);
 
-var hun1 = {
-  ner: "Baigal",
-  utas: 8888888,
-  geriinHayag: {
-    hot: "UB",
-    duureg: "BGD",
-  },
-  mendleh: function () {
-    console.log("hi " + this.ner);
-    function aa() {
-      console.log(this);
-    }
-    aa();
-  },
-};
+// var hun1 = {
+//   ner: "Baigal",
+//   utas: 8888888,
+//   geriinHayag: {
+//     hot: "UB",
+//     duureg: "BGD",
+//   },
+//   mendleh: function () {
+//     console.log("hi " + this.ner);
+//     function aa() {
+//       console.log(this);
+//     }
+//     aa();
+//   },
+// };
 
 // function aaaaa() {
 //   console.log(this);
@@ -439,53 +439,69 @@ Books object доторх номнуудаар for in давталт ашигл�
 // }
 
 // Дасгал №15:
-// ner, dugaar, email 3-н property-tai hun1, hun2, hun3 geh met objectuud uusgeed massiv dotor hiine. promptoos email awj objectuudaa hadgalsan massiv dotorh objectuudaar dawtalt hiigeed oruulsan emailtai ali neg objectiin email taarj bhin bol tuhain emailtai objectiig consoled hewle.
-var student1 = {
-  ner: "a",
-  number: "99221111",
-  email: "a@gmail.com",
-};
-var student2 = {
-  ner: "b",
-  number: "90444444",
-  email: "b@gmail.com",
-};
-var student3 = {
-  ner: "c",
-  number: "95555555",
-  email: "c@gmail.com",
-};
-var student4 = {
-  ner: "d",
-  number: "96666666",
-  email: "d@gmail.com",
-};
-var student5 = {
-  ner: "e",
-  number: "99999999",
-  email: "e@gmail.com",
-};
-var mobiUsers = [];
-var students = [student1, student2, student3, student4, student5];
-var bool = false;
-var email = prompt("haih emailee oruulna u");
-for (var i = 0; i < students.length; i++) {
-  if (email == students[i].email) {
-    console.log(students[i]);
-    bool = true;
-  }
+// ner, dugaar, email 3-н property-tai student1, student2, student3 geh met objectuud uusgeed massiv dotor hiine. promptoos email awj objectuudaa hadgalsan massiv dotorh objectuudaar dawtalt hiigeed oruulsan emailtai ali neg objectiin email taarj bhin bol tuhain emailtai objectiig consoled hewle.
+// var student1 = {
+//   ner: "a",
+//   number: "99221111",
+//   email: "a@gmail.com",
+// };
+// var student2 = {
+//   ner: "b",
+//   number: "90444444",
+//   email: "b@gmail.com",
+// };
+// var student3 = {
+//   ner: "c",
+//   number: "95555555",
+//   email: "c@gmail.com",
+// };
+// var student4 = {
+//   ner: "d",
+//   number: "96666666",
+//   email: "d@gmail.com",
+// };
+// var student5 = {
+//   ner: "e",
+//   number: "99999999",
+//   email: "e@gmail.com",
+// };
+// var mobiUsers = [];
+// var students = [student1, student2, student3, student4, student5];
+// var bool = false;
+// var email = prompt("haih emailee oruulna u");
+// for (var i = 0; i < students.length; i++) {
+//   if (email == students[i].email) {
+//     console.log(students[i]);
+//     bool = true;
+//   }
 
-  if (
-    students[i].number.slice(0, 2) == 99 ||
-    students[i].number.slice(0, 2) == 95
-  ) {
-    mobiUsers.push(students[i]);
-  }
-}
-if (bool == false) {
-  alert("oldsongui e.");
-}
-console.log(mobiUsers);
-/*Дасгал 16
+//   if (
+//     students[i].number.slice(0, 2) == 99 ||
+//     students[i].number.slice(0, 2) == 95
+//   ) {
+//     mobiUsers.push(students[i]);
+//   }
+// }
+// if (bool == false) {
+//   alert("oldsongui e.");
+// }
+// console.log(mobiUsers);
+
+/*2022.11.07*/
+/*Дасгал №16
 Massiv дотор хамгийн сүүлийн element-ээс бусад бүх утгуудыг нэгтгэж, хамгийн сүүлийн element-тэй таарж байгаа эсэхийг тооцож boolean утга буцаа. */
-// var arr = ["a", "b", "c", "abc"];
+
+/* Дасгал №17
+ Массив дотор number болон string төрлийн тоонууд өгөгджээ. Зөвхөн number төрлийн тоонуудын нийлбэрийг олж буцаа. */
+
+/* Дасгал №18 
+Массив өгөдсөн бол element тус бүрийг харгалзах indexeer нь үржүүлж үржвэрүүдийн нийлбэрийг буцаа. */
+
+/* Дасгал №19 
+Хайрцагны урт, өргөн болон өндрийн хэмжээг агуулсан массив өгөгджээ... нийт хайрцагнуудын эзэлхүүнийг буцаа. */
+
+/* Дасгал №20
+ Дан boolean утгууд агуулсан массив өгөгдсөн бол, дотор нь нийт хэдэн ширхэг true утга байгааг олж буцаа. */
+
+/* Дасгал №21 
+Mассивийн эхний element болон уртын хэмжээ өгөгдсөн бол, эхний element-ийг уртын хэмжээ хүртэл үржүүлэн үлдсэн element-үүдийг тоосож массив буцаа. */
