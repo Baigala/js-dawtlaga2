@@ -11,7 +11,7 @@
 // 10. regex
 // 11. localstorage
 // 12. OOP
-// 13. OOP
+// 13. Promise
 // 14. Module
 
 /*2022.10.23*/
@@ -569,3 +569,196 @@ Mассивийн эхний element болон уртын хэмжээ өгөг
 //   return arr;
 // }
 // console.log(ex21(3, 4));
+
+/*2022.11.09 Сэдэв: es6 нэмэлтүүд */
+
+/* №1. let, const */
+/* let түлхүүр үг ашиглан зарласан хувьсагчийг нэг орчинд дахиж зарлаж өгж болохгүй. */
+// var a = 5;
+// var a = 6;
+// let too = 4;
+// let too = 3;
+/* var түлхүүр үг ашиглан зарласан хувьсагч function дотроо хүчинтэй бол let -> block haalt дотроо хүчинтэй блокон хаалтнаас гадна дуудвал is not defined болсон байна. */
+// function sayHello() {
+//   for (let i = 0; i < 5; i++) {
+//     console.log(i);
+//   }
+//   console.log("i===> " + i);
+// }
+// sayHello();
+/* const түлхүүр үг ашиглан зарласан хувьсагч доторх анхны утгыг нь өөрчилж болохгүй. Жишээ нь: Хүний овог нэр хадгалах, html таг барьж авах.*/
+// const ner = "Baigal";
+// ner = "Zoloo";
+
+/* №2. object дээрх нэмэлтүүд */
+// object-ийн function-ийг method гэж дуудна.
+// es6 дээр method-ийн : function түлхүүр үгийг нь хаяж бичнэ.
+const person1 = {
+  name: "Baigal",
+  walk: function () {
+    console.log(`${this.name} walking`);
+  },
+  talk() {
+    console.log("talks");
+  },
+};
+person1.walk();
+person1.talk();
+// console.log("hi " + person1.name);
+// console.log(`hi ${person1.name}`);
+
+// №3. arrow functions - суман функц нь es6-c гарж ирсэн функцыг бичих илүү товч хялбар бичиглэл юм.
+// function-ийг зарлаж өгөхдөө ашигладаг function түлхүүр үгийг нь хасаад суман функц гэдгийн илэрхийлэхийн тулд => зааж өгнө. Хэрвээ ганц parameter-тай байхын бол () хаалтыг авахгүй байж болно. Мөн блокон хаалт дотор ганц мөртөй код байхаар бол return түлхүүр үг мөн {} ийг нь бичихгүй байж болно.
+// Жишээ 1:
+// const zeregtDewshuul = function (number) {
+//   return number * number;
+// };
+const zeregtDewshuul = (number) => number * number;
+console.log(zeregtDewshuul(5));
+// Жишээ 2:
+const books = [
+  { id: 1, isRead: true },
+  { id: 2, isRead: false },
+  { id: 3, isRead: true },
+  { id: 4, isRead: false },
+];
+// const unshsanNom = books.filter(function (book) {
+//   return book.isRead;
+// });
+const unshsanNom = books.filter((book) => book.isRead);
+
+// №4. arrow functions and this
+// Callback functions оbject-ийн функцдээ орохгүй байгаа учир this нь window object-ийг зааж байна.
+const person2 = {
+  talk() {
+    setTimeout(function () {
+      console.log("----");
+      console.log("this ===>", this);
+    }, 1000);
+  },
+};
+person2.talk();
+
+// Callback function дотор гаднах обьектээ заадаг болгох нь:
+const person3 = {
+  talk() {
+    var self = this;
+    setTimeout(function () {
+      console.log("----");
+      console.log("self ===>", self);
+    }, 1000);
+  },
+};
+person3.talk();
+// setTimeout function доторх callback function ийг arrow function-оор сольж үзье.
+const person4 = {
+  talk() {
+    setTimeout(() => {
+      console.log("----");
+      console.log("arrow function доторх this ===>", this);
+    }, 1000);
+  },
+};
+person4.talk();
+
+/* №5. Array-тай ажилладаг нэмэлт функцууд*/
+// map
+const colors = ["red", "green", "blue"];
+const arr1 = colors.map(function (color) {
+  return "<li>" + color + "</li>";
+});
+console.log(arr1);
+
+// forEach
+const arr2 = ["a", "b", "c"];
+arr2.forEach((element) => console.log(element));
+
+// filter
+const words = [
+  "spray",
+  "limit",
+  "elite",
+  "exuberant",
+  "destruction",
+  "present",
+];
+const result = words.filter((word) => word.length > 6);
+console.log(result);
+
+// find
+const arr3 = [5, 12, 8, 130, 44];
+const found = arr3.find((element) => element > 10);
+console.log(found);
+
+// findIndex
+const arr4 = [5, 12, 8, 130, 44];
+console.log(arr4.findIndex((element) => element > 13));
+
+// indexOf
+const beasts = ["ant", "bison", "camel", "duck", "bison"];
+console.log(beasts.indexOf("bison"));
+console.log(beasts.indexOf("bison", 2));
+console.log(beasts.indexOf("giraffe"));
+
+//join
+const elements = ["Fire", "Air", "Water"];
+console.log(elements.join());
+console.log(elements.join(""));
+console.log(elements.join("+"));
+
+// reduce
+const arr5 = [1, 2, 3, 4];
+const anhniiUtga = 0;
+const niilber = arr5.reduce((a, b) => a + b, anhniiUtga);
+console.log(niilber);
+
+// some
+const arr6 = [1, 2, 3, 4, 5];
+const tegshToo = (element) => element % 2 === 0;
+console.log(arr6.some(tegshToo));
+
+//every
+const tooo = (currentValue) => currentValue < 40;
+const arr7 = [1, 30, 4, 29, 10, 13];
+console.log(arr7.every(tooo));
+
+// №6. object destructuring
+const geriinHayag = {
+  uls: "Монгол",
+  hot: "УБ",
+  duureg: "БГД",
+};
+
+// const uls = geriinHayag.uls;
+// const hot = geriinHayag.hot;
+// const duureg = geriinHayag.duureg;
+// дээрх байдлаар хандаж хувьсагчинд хадгалсныг destructuring ашиглан доорх байдлаар бичнэ.
+// const { duureg, hot, uls } = geriinHayag;
+// object-ийн ганц утгыг авахаар бол:
+// const { duureg } = geriinHayag;
+// object-ийн ганц утгыг property-ний нэрнээс өөр нэр өгөх хэрэгтэй бол:
+// const { hot: city } = geriinHayag;
+
+// №7. Spread Operator
+const first = [1, 2, 3];
+const second = [4, 5, 6];
+const negtgesen = first.concat(second);
+console.log(negtgesen);
+const SpreadOperatorAshiglanNegtgesen = [...first, "a", "z", ...second, "b"];
+console.log(SpreadOperatorAshiglanNegtgesen);
+// Object дээр spread operator хэрэглэх нь:
+const toirog = {
+  radius: 10,
+  zuzaan: "10cm",
+};
+const ongotoiToirog = {
+  ...toirog,
+  color: "black",
+};
+
+console.log(ongotoiToirog);
+
+// Дараа үзэх es6 нэмэлтүүд
+// Classes;
+// Promise;
+// Modules;
