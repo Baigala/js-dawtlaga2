@@ -12,7 +12,7 @@
     </style>
   </head>
   <body>
-    <input class="pass password" type="password" />
+    <input class="pass password" id="pass" type="password" />
 
     <div id="parent">
       <p class="child1 child">Child 1</p>
@@ -33,24 +33,40 @@
       // select хийж авсан html tag-аа const дотор хадгална.
       // querySelector, getElementById, querySelectorAll
       // camelCase - background-color => backgroundColor, grid-template-rows => gridTemplateRows
-      const inputElement = document.querySelector("input[type = password]");
-      inputElement.placeholder = "password";
-      inputElement.style.border = "3px dashed red";
+      //   const inputElement1 = document.querySelector(".password");
+      //   const inputElement2 = document.getElementById("#pass");
+      const inputElement3 = document.querySelector("input[type=password]");
+      inputElement3.placeholder = "password";
+      inputElement3.style.border = "dashed 2px red";
       // inputElement.className ===> classuudiig '' string dotor haruulna.
       // inputElement.classList ===> classuudaar massiv bucaana.
+      //   inputElement3.classList.add("aa");
 
+      const p1 = document.querySelector(".child1");
+      const p2 = document.querySelector(".child2");
+      const p3 = document.querySelector(".child3");
       //innerHTML - html tag oruulwal ajiluulna
+      p1.innerHTML = "<em>text1</em>";
       //innerText - tagiig text bdlaar oruulna
+      p2.innerText = "<em>text2</em>";
       //textContent - tagiig text bdlaar oruulna
+      p3.textContent = "<em>text3</em>";
 
-      const textInput = document.getElementById("text");
-      const color = document.getElementById("color");
-      const container = document.querySelector(".container");
+      // querySelectorAll
+      const pTags = document.querySelectorAll(".child");
+      pTags.forEach((el, i, arr) => {
+        if (i % 2 == 1) {
+          el.style.color = "red";
+        }
+        console.log(arr);
+      });
 
-      function insertTextValue() {
-        container.innerHTML += `<p style="color: ${color.value}">${textInput.value}</p>`;
-        textInput.value = "";
-      }
+      //   var x = document.getElementById("text");
+      //   undefined;
+      //   x.value;
+      //   ("ddd");
+      //   x.value;
+      //   ("dddaaaaaaaaaa");
     </script>
   </body>
 </html>
