@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="w-full h-screen flex justify-center items-center bg-gray-100">
+    <div class="bg-white rounded-xl p-4 flex flex-col">
+      <label>Нууц үгээ оруулна уу</label>
+      <input
+        class="py-3 px-4 rounded-xl bg-gray-100 mb-4"
+        type="text"
+        id="input"
+      />
+      <p class="text-red-400 requirement">Жижиг үсэг орсон байх</p>
+      <p class="text-red-400 requirement">Том үсэг орсон байх</p>
+      <p class="text-red-400 requirement">Тоо орсон байх</p>
+      <p class="text-red-400 requirement">Тэмдэгт орсон байх - !@#$%^&*</p>
+      <p class="text-red-400 requirement">
+        Хамгийн багадаа 8 тэмдэгт орсон байх
+      </p>
+    </div>
+    <script>
+      // regExp.test(sentence); : boolean.
+      // sentence.match(regExp) : obj | array; 1 ширхэг өгөгдөл байвал object таарж байгаа бүх өгөгдлийг буцаахаар бол massive буцаана.
+      // g - таарч буй бүх элементийг массив болгон буцаана.
+      // i - ignore the case том жижиг үсгийн ялгааг арилгана.
+      // \d - [0-9] - тоонуудыг илэрхийлнэ.
+      // \D - тооноос бусад тэмдэгтийг авна [^0-9]
+      // \w - цагаан толгойн үсэгнүүдийг илэрхийлнэ. [a-zA-Z]
+      // \W - тэмдэгтүүдийг илэрхийлнэ /[^a-zA-Z0-9_]/.
+      // _ тэмдэгт нь special charactarдаа ордоггүй \W гэж хайх үед гарж ирэхгүй.
+      // \s - white space зайг илэрхийлнэ.
+      // \S - white space-с бусад - [^ ]
+      // ^a - carret юугаар эхлэхийг зааж өгнө.
+      // $ tosgoliig zaana.
+      // [^d] алгасна.
+      // [] - дотор хэд хэдэн шалгах тэмдэгтээ нийлүүлж бичнэ.
+      // a? 0 болон 1 нийцэл буюу нэмэлтээр а байж болно.
+      // + урд байгаа тэмдэгтэй таарж байгаа тэмдгийг авна.
+      // a* 0 болон түүнээс их нийцэл
+      // . оронд юу ч байж болно
+      // {5, 10} - 5-с 10 хооронд, {5} 5 урттай, {,10} - хамгийн ихдээ 10 урттай
+      // | or
+      const sentence =
+        "Hi, my nameaaaaa is Gizmo.Heey I am a fat ceaaaat cat. I study in indra institute is is is 143 45";
+      const regex1 = /i/g;
+      const regex2 = /i/gi;
+      const regex3 = /e+/g;
+      const regex4 = /ea*/g;
+      const regex5 = /.a/g;
+      const regex6 = /a../g;
+      const regex7 = /\.H/g; // цэг
+      const regex8 = /[fc]at/g;
+      const regex9 = /bla|nin|in./gi;
+      const regex10 = /\D/g;
+      const regex11 = /ea?/g;
+      const regex12 = /\w{4}/g;
+
+      const found = sentence.match(regex12);
+      console.log(found);
+      const testing = regex1.test(sentence);
+      console.log(testing);
+
+      var num = "11/16/2022";
+      console.log(num.replace(/\//g, "-"));
+
+      const input = document.querySelector("#input");
+      const ptags = document.querySelectorAll(".requirement");
+      input.addEventListener("input", function () {
+        var regEx = [/[a-z]/, /[A-Z]/, /\d/, /\W/, /.{8,}/];
+        regEx.forEach((rxp, index) => {
+          if (rxp.test(input.value)) {
+            ptags[index].classList.remove("text-red-400");
+            ptags[index].classList.add("text-gray-400");
+            ptags[index].classList.add("line-through");
+          } else {
+            ptags[index].classList.add("text-red-400");
+            ptags[index].classList.remove("text-gray-400");
+            ptags[index].classList.remove("line-through");
+          }
+        });
+
+        var regExpGeneral = /(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\W)(?=.{8,})/;
+        if (regExpGeneral.test(input.value)) {
+          console.log(true);
+        }
+      });
+    </script>
+  </body>
+</html>
