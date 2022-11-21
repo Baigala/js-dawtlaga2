@@ -132,11 +132,11 @@ talbai = PI * r * r; */
 
 /* Дасгал №3:
 10 хүртэл давталт хийж, тоо тус бүрийг өмнөх тооны нийлбэртэй консолд хэвлэнэ үү. */
-// var sum = 0;
-// for (var i = 0; i <= 10; i++) {
-//   sum += i;
-//   console.log(`${i} hurtelh toonii niilber: ${sum}`);
-// }
+var sum = 0;
+for (var i = 0; i <= 10; i++) {
+  sum += i;
+  console.log(`${i} hurtelh toonii niilber: ${sum}`);
+}
 
 /* Дасгал №4:
 *
