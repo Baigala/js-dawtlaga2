@@ -8,32 +8,33 @@
   </head>
   <body>
     <script>
-      // Constructor function;
-      // new
+      //OOP
       function Person(ner, mergejil) {
         this.ner = ner;
         this.mergejil = mergejil;
       }
+
       Person.prototype.sayYourName = function () {
         return this.ner;
       };
+
       Person.prototype.changeName = function (name) {
         return `${this.ner} ==> ${(this.ner = name)}`;
       };
       const p1 = new Person("Baigal", "Bagsh");
 
       // OOP in es6
-      //   class
+      // class
       class Person1 {
         constructor(username) {
           this.username = username;
         }
-        setName(name) {
+        neriigOorchloh(name) {
           this.username = name;
-          return this;
+          return this.username;
         }
       }
-
+      var person1 = new Person1("Anu");
       // Class inheritance
       class Member extends Person1 {
         state = {
@@ -52,6 +53,7 @@
           return this;
         }
       }
+      var member1 = new Member("Hulan", "hulan@gmail.com");
     </script>
   </body>
 </html>
