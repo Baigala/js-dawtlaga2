@@ -345,7 +345,6 @@ string төрлийн тоо ==> "1258" */
 //   for (var i = 0; i < arr.length; i++) {
 //     if (arr[i] == ele) {
 //       arr.splice(i, 1);
-//       break;
 //     }
 //   }
 //   return arr;

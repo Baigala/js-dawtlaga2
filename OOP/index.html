@@ -8,7 +8,7 @@
   </head>
   <body>
     <script>
-      //OOP
+      // es5
       function Person(ner, mergejil) {
         this.ner = ner;
         this.mergejil = mergejil;
@@ -23,37 +23,13 @@
       };
       const p1 = new Person("Baigal", "Bagsh");
 
-      // OOP in es6
-      // class
-      class Person1 {
-        constructor(username) {
-          this.username = username;
-        }
-        neriigOorchloh(name) {
-          this.username = name;
-          return this.username;
-        }
-      }
-      var person1 = new Person1("Anu");
-      // Class inheritance
-      class Member extends Person1 {
-        state = {
-          val: 0,
-          val1: 0,
-        };
-        constructor(username, email) {
-          super(username);
-          this.email = email;
-        }
-        setState(obj) {
-          this.state = {
-            ...this.state,
-            ...obj,
-          };
-          return this;
-        }
-      }
-      var member1 = new Member("Hulan", "hulan@gmail.com");
+      // console.log(p1.ner + " nertei.");
+      // console.log(`${p1.ner} nertei.`); // tab deer `` -backtick
+
+      // function nemeh(too1, too2) {
+      //   return too1 + too2;
+      // }
+      // console.log(nemeh(1, 2) * 2);
     </script>
   </body>
 </html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Super class
+      class Transaction {
+        constructor(desc, value) {
+          this.desc = desc;
+          this.value = value;
+        }
+
+        info() {
+          let typeText = this instanceof Income ? "Орлого" : "Зарлага";
+          return `${typeText}) ${this.value}₮ ==> ${this.desc}`;
+        }
+      }
+
+      // Sub class
+      class Income extends Transaction {
+        constructor(desc, value) {
+          super(desc, value);
+        }
+      }
+
+      // Sub class
+      class Expense extends Transaction {
+        constructor(desc, value, zaaval = false) {
+          super(desc, -value);
+          this.zaaval = zaaval;
+        }
+      }
+      let f = [];
+
+      f.push(new Income("Tsalin", 2500));
+      f.push(new Expense("Hool", 200, true));
+      f.push(new Income("Sugalaa", 700));
+      f.push(new Expense("Kino uzsen", 19));
+      f.push(new Expense("Bairnii mongo", 150, true));
+
+      f.forEach((e) => console.log(e.info()));
+    </script>
+  </body>
+</html>
