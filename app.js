@@ -602,6 +602,7 @@ const person1 = {
     console.log("talks");
   },
 };
+
 person1.walk();
 person1.talk();
 // console.log("hi " + person1.name);
@@ -740,23 +741,24 @@ const geriinHayag = {
 // const { hot: city } = geriinHayag;
 
 // №7. Spread Operator
-const first = [1, 2, 3];
-const second = [4, 5, 6];
-const negtgesen = first.concat(second);
-console.log(negtgesen);
-const SpreadOperatorAshiglanNegtgesen = [...first, "a", "z", ...second, "b"];
-console.log(SpreadOperatorAshiglanNegtgesen);
+// const first = [1, 2, 3];
+// const second = [4, 5, 6];
+// const negtgesen = first.concat(second);
+// console.log(negtgesen);
+// const SpreadOperatorAshiglanNegtgesen = [...first, "a", "z", ...second, "b"];
+// console.log(SpreadOperatorAshiglanNegtgesen);
 // Object дээр spread operator хэрэглэх нь:
-const toirog = {
-  radius: 10,
-  zuzaan: "10cm",
-};
-const ongotoiToirog = {
-  ...toirog,
-  color: "black",
-};
+// const toirog = {
+//   radius: 10,
+//   zuzaan: "10cm",
+// };
 
-console.log(ongotoiToirog);
+// const ongotoiToirog = {
+//   ...toirog,
+//   color: "black",
+// };
+
+// console.log(ongotoiToirog);
 
 // Дараа үзэх es6 нэмэлтүүд
 // Classes;
